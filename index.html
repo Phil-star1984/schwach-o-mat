@@ -41,22 +41,37 @@
             border: 2px solid #ccc;
             border-radius: 5px;
         }
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            font-size: 1.2em;
+            
+        }
+
+        .footer p {
+            font-size: 1rem;
+            color: black;
+        }
     </style>
 </head>
 <body>
     <h1>🇩🇪Schwach-O-Mat 3000🇩🇪</h1>
     <h2>Wählen wie echte Profis!😆</h2>
-    <input type="text" id="plz" placeholder="Gib deine Postleitzahl ein" maxlength="5">
+    <!-- <input type="text" id="plz" placeholder="Gib deine Postleitzahl ein" maxlength="5"> -->
     <button class="button" onclick="wahlStarten()">Zufällig wählen!</button>
     <div id="ergebnis"></div>
+    <div class="footer"><p>Dies ist eine Spaß-App von Millionpainter.de. </br>Alle Wahlvorschläge sind zufällig und kein Wahlempfehlung.</br><a href="/impressum.html">Impressum</a></p></div>
     
     <script>
+        const plz = 97070
+
         function wahlStarten() {
-            const plz = document.getElementById("plz").value;
-            if (plz.length !== 5 || isNaN(plz)) {
+            /* const plz = document.getElementById("plz").value; */
+            /* if (plz.length !== 5 || isNaN(plz)) {
                 alert("Bitte gib eine gültige Postleitzahl ein!");
                 return;
-            }
+            } */
             entscheidTreffen(plz);
         }
 
